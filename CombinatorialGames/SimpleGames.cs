@@ -16,7 +16,7 @@ namespace CombinatorialGames
             _RightGame = rightGame;
         }
 
-        public override IEnumerable<CombinatorialGame> Children(Player player)
+        public new IEnumerable<ChoicelessGame> Children(Player player)
         {
             var game = (player == Player.Left ? _LeftGame : _RightGame);
             if (game != null)
@@ -27,6 +27,11 @@ namespace CombinatorialGames
             {
                 yield break;
             }
+        }
+
+        protected override IEnumerable<CombinatorialGame> GetChildren(Player player)
+        {
+            return this.Children(player);
         }
 
         protected ChoicelessGame _LeftGame;
