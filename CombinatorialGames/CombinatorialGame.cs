@@ -8,7 +8,12 @@ namespace CombinatorialGames
 {
     public abstract class CombinatorialGame
     {
-        public abstract IEnumerable<CombinatorialGame> Children(Player player);
+        public IEnumerable<CombinatorialGame> Children(Player player)
+        {
+            return this.GetChildren();
+        }
+
+        protected abstract IEnumerable<CombinatorialGame> GetChildren(Player player);
 
         public bool Terminal(Player player)
         {
