@@ -4,7 +4,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CombinatorialGames
+namespace CombinatorialGames.SimpleGames
 {
     public class ChoicelessGame : CombinatorialGame
     {
