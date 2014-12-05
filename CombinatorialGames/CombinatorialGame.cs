@@ -1,11 +1,11 @@
 ﻿/* Copyright (c) 2014 Paul Etherton
  */
 
-using System.Linq;
-using System.Collections.Generic;
-
 namespace CombinatorialGames
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
     public abstract class CombinatorialGame
     {
         public IEnumerable<CombinatorialGame> Children(Player player)

@@ -1,10 +1,10 @@
 ﻿/* Copyright (c) 2014 Paul Etherton
  */
 
-using System.Collections.Generic;
-
 namespace CombinatorialGames.SimpleGames
 {
+    using System.Collections.Generic;
+
     public class ChoicelessGame : CombinatorialGame
     {
         public ChoicelessGame(ChoicelessGame leftGame, ChoicelessGame rightGame)
