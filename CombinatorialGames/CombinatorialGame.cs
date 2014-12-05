@@ -8,7 +8,7 @@ namespace CombinatorialGames
 {
     public abstract class CombinatorialGame
     {
-        public IEnumerable<CombinatorialGame> Children(Player player);
+        public abstract IEnumerable<CombinatorialGame> Children(Player player);
 
         public bool Terminal(Player player)
         {
