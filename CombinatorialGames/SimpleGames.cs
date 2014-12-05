@@ -57,13 +57,34 @@ namespace CombinatorialGames
         private ChoicelessGame _RightGame = null;
     }
 
+
     public class IntegerGame : ChoicelessGame
     {
         public IntegerGame(int integer)
-            : base(
-                leftGame: (integer > 0 ? new IntegerGame(integer - 1) : null),
-                rightGame: (integer < 0 ? new IntegerGame(integer + 1) : null))
         {
+            this.Integer = integer;
+        }
+
+        protected override ChoicelessGame LeftGame
+        {
+            get
+            {
+                return this.Integer > 0 ? new IntegerGame(this.Integer - 1) : null;
+            }
+        }
+
+        protected override ChoicelessGame RightGame
+        {
+            get
+            {
+                return this.Integer < 0 ? new IntegerGame(this.Integer + 1) : null;
+            }
+        }
+
+        public int Integer
+        {
+            get;
+            private set;
         }
     }
 }
