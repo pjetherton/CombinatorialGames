@@ -10,7 +10,7 @@ namespace CombinatorialGames
     {
         public IEnumerable<CombinatorialGame> Children(Player player)
         {
-            return this.GetChildren();
+            return this.GetChildren(player);
         }
 
         protected abstract IEnumerable<CombinatorialGame> GetChildren(Player player);
