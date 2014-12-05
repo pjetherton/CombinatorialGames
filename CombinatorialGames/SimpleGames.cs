@@ -14,6 +14,10 @@ namespace CombinatorialGames
             _RightGame = rightGame;
         }
 
+        protected ChoicelessGame()
+        {
+        }
+
         public new IEnumerable<ChoicelessGame> Children(Player player)
         {
             var game = (player == Player.Left ? _LeftGame : _RightGame);
@@ -32,9 +36,25 @@ namespace CombinatorialGames
             return this.Children(player);
         }
 
-        protected ChoicelessGame _LeftGame;
+        protected virtual ChoicelessGame LeftGame
+        {
+            get
+            {
+                return _LeftGame;
+            }
+        }
 
-        protected ChoicelessGame _RightGame;
+        private ChoicelessGame _LeftGame = null;
+
+        protected virtual ChoicelessGame RightGame
+        {
+            get
+            {
+                return _RightGame;
+            }
+        }
+
+        private ChoicelessGame _RightGame = null;
     }
 
     public class IntegerGame : ChoicelessGame
