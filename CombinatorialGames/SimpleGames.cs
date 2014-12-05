@@ -8,9 +8,7 @@ namespace CombinatorialGames
 {
     public class ChoicelessGame : CombinatorialGame
     {
-        public ChoicelessGame(
-            ChoicelessGame leftGame,
-            ChoicelessGame rightGame)
+        public ChoicelessGame(ChoicelessGame leftGame, ChoicelessGame rightGame)
         {
             _LeftGame = leftGame;
             _RightGame = rightGame;
