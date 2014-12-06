@@ -34,7 +34,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="CombinatorialGame.cs" />
-    <Compile Include="SimpleGames.cs" />
+    <Compile Include="SimpleGames\SimpleGames.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="SimpleGames\" />
+  </ItemGroup>
 </Project>
