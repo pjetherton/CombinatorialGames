@@ -4,6 +4,7 @@
 namespace CombinatorialGames.SimpleGames
 {
     using System.Collections.Generic;
+    using System.Linq;
 
     public class ChoicelessGame : CombinatorialGame
     {
@@ -62,6 +63,11 @@ namespace CombinatorialGames.SimpleGames
         public IntegerGame(int integer)
         {
             this.Integer = integer;
+        }
+
+        public new IEnumerable<IntegerGame> Children(Player player)
+        {
+            return base.Children(player).Cast<IntegerGame>();
         }
 
         protected override ChoicelessGame LeftGame
