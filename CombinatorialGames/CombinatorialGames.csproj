@@ -35,6 +35,8 @@
     <Compile Include="Player.cs" />
     <Compile Include="CombinatorialGame.cs" />
     <Compile Include="SimpleGames\SimpleGames.cs" />
+    <Compile Include="SimpleGames\ChoicelessGame.cs" />
+    <Compile Include="SimpleGames\IntegerGame.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
